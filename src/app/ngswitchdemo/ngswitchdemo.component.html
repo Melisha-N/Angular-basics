@@ -1,0 +1,23 @@
+<p>ngswitch - demo</p>
+<h1>ngSwitch Example</h1>
+<label>Select your course: </label>
+<select (change)="selectCourse($event)">
+    <option value="">--select--</option>
+    <option value="java">Java</option>
+    <option value="ang">Angular</option>
+    <option value="react">React</option>
+    <option value="html">HTML</option>
+    <option value="jee">JEE</option>
+</select>
+
+
+
+<div [ngSwitch]='course'>
+    <h2 *ngSwitchCase="'java'">Java</h2>
+    <h2 *ngSwitchCase="'ang'">Angular</h2>
+    <h2 *ngSwitchCase="'react'">React</h2>
+    <h2 *ngSwitchCase="'html'">HTML</h2>
+    <h2 *ngSwitchCase="'jee'">JEE</h2>
+    <h2 *ngSwitchDefault="">No course selected</h2>
+</div>
+

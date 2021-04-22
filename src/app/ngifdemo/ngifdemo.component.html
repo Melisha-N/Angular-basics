@@ -1,0 +1,51 @@
+<p>ngif - demo</p>
+<!-- <h1 *ngIf="isValid">Valid</h1>
+<h1 *ngIf="!isValid">Invalid</h1> -->
+
+<!-- <div *ngIf="isValid else elseBlock">
+    <h1>Valid</h1>
+</div>
+<ng-template #elseBlock>
+    <h1>ElseBlock display</h1>
+</ng-template> -->
+
+<!-- <div *ngIf="isValid then trueBlock else elseBlock"></div>
+<ng-template #trueBlock>
+    <h1>TrueBlock display</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>ElseBlock display</h1>
+</ng-template> -->
+
+<input type="radio" name="r1" (click)="changeEmployee(true)">Contract Employee
+<input type="radio" name="r2" checked (click)="changeEmployee(true)">Permanent Employee
+<br>
+<div *ngIf="isEmployee" class="contract">
+    <h4>Only Contract Employee</h4>
+</div><br>
+<div *ngIf="!isEmployee" class="permanent">
+    <h4>Only Permanent Employee</h4>
+</div>
+
+<!-- Checking and dispalying data -->
+<h1>Employee Details:</h1>
+<table border="2">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>username</th>
+        <th>email</th>
+        <th>address</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+        <!-- <td>{{i+1}}</td> -->
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.username}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.address}}</td>
+    </tr>
+    <tr *ngIf="!employees || employees.length == 0">
+        <td colspan="4" style="text-align: center;">No Records Found!!!</td>
+    </tr>
+</table>

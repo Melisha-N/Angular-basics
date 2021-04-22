@@ -1,0 +1,21 @@
+.contract{
+    margin-top: 0%;
+    padding: 15px;
+    width: 10%;
+    border: 5px solid violet;
+    background-color: thistle;
+    text-align: left;
+    color: black;
+    
+}
+
+.permanent{
+    margin-top: 0%;
+    padding: 15px;
+    width: 10%;
+    border: 5px solid rgb(124, 111, 124);
+    background-color:blanchedalmond;
+    text-align: left;
+    color: black;
+    
+}

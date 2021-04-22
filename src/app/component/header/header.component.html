@@ -1,0 +1,29 @@
+<!-- Interpolation Binding -->
+<p class="header"><b>Welcome to {{headerName}}</b></p>
+//Interpolation Binding
+<br>{{2+4}} 
+<h4>Products:{{productList}}</h4><br>
+<!-- <h3>Single Product:{{productList[2]}}</h3>
+{{displayName()}} -->
+
+<!-- Property Binding --> 
+<!-- to check o/p in browser right click inspect and see the id attribute and its value -->
+Enter details:<input type="text">
+<!-- <input type="checkbox" id="checkbox1">
+<input type="checkbox" id="checkbox2"> -->
+<input type="checkbox" [id]="checkboxId">
+<input type="checkbox" [id]="checkbxId">
+<input type="checkbox" [id]="checkbxId[2]">  //Property Binding<br>
+<br>
+
+<!-- Checking disabled -->
+<!-- Enter details(checking disabled):<input type="text" disabled> -->
+<!-- Enter details(checking disabled=isAccepted):<input type="text" disabled=isAccepted> -->
+
+<!-- Two Way Binding -->
+<!-- <input type="text" name="head" placeholder="Type Name" value="HEAD"> -->
+<!-- <input type="text" name="head" placeholder="Type Name" value="userName">   //output: userName -->
+<!-- to overcome above problem , we do the following -->
+<input type="text" name="head" [(ngModel)]='userName'>  //Two Way Binding
+<h3>{{userName}}</h3>
+

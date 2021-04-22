@@ -1,0 +1,43 @@
+.first{
+    margin-top: 0%;
+    padding: 15px;
+    width: 10%;
+    border: 5px solid violet;
+    background-color: thistle !important;
+    text-align: left;
+    color: black;
+    
+}
+
+.second{
+    margin-top: 0%;
+    padding: 15px;
+    width: 10%;
+    border: 5px solid rgb(124, 111, 124);
+    background-color:blanchedalmond;
+    text-align: left;
+    color: black;
+    
+}
+
+.third{
+    margin-top: 0%;
+    padding: 15px;
+    width: 10%;
+    border: 5px solid violet;
+    background-color: turquoise;
+    text-align: left;
+    color: black;
+    
+}
+
+.final{
+    margin-top: 0%;
+    padding: 15px;
+    width: 10%;
+    border: 5px solid rgb(124, 111, 124);
+    background-color: tomato;
+    text-align: left;
+    color: black;
+    
+}
