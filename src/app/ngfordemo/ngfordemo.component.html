@@ -8,15 +8,18 @@
         <th>name</th>
         <th>username</th>
         <th>email</th>
+        <th>age</th>
         <th>address</th>
     </tr>
-    <tr *ngFor="let emp of employees">
+    <tr *ngFor="let emp of employees| numbersort">
+        <!-- <tr *ngFor="let emp of employees| namesort"></tr> -->
         <!-- <td>{{i+1}}</td> -->
         <!-- <td>{{emp.id| currency:'Rs'}}</td> -->
         <td>{{emp.id}}</td>
         <td>{{emp.name}}</td>
-        <td>{{emp.username|lowercase}}</td>
-        <td>{{emp.email}}</td>
+        <td>{{emp.username}}</td>
+        <td>{{emp.email|lowercase}}</td>
+        <td>{{emp.age|agecalculate}}</td>
         <td>{{emp.address.city}}</td>
     </tr>
 </table>

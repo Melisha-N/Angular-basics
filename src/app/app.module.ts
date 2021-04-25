@@ -13,6 +13,11 @@ import { NgclassdemoComponent } from './ngclassdemo/ngclassdemo.component';
 import { TogglebuttonComponent } from './togglebutton/togglebutton.component';
 import { NumbersortPipe } from './pipesdemo/numbersort.pipe';
 import { NamesortPipe } from './pipesdemo/namesort.pipe';
+import { HighlightDirective } from './directive/highlight.directive';
+import { NgstyledemoComponent } from './ngstyledemo/ngstyledemo.component';
+import { CalculatorSIComponent } from './calculator-si/calculator-si.component';
+import { TemplatereferencevariabledemoComponent } from './templatereferencevariabledemo/templatereferencevariabledemo.component';
+import { AgecalculatePipe } from './pipesdemo/agecalculate.pipe';
 
 
 @NgModule({
@@ -27,7 +32,12 @@ import { NamesortPipe } from './pipesdemo/namesort.pipe';
     NgclassdemoComponent,
     TogglebuttonComponent,
     NumbersortPipe,
-    NamesortPipe
+    NamesortPipe,
+    HighlightDirective,
+    NgstyledemoComponent,
+    CalculatorSIComponent,
+    TemplatereferencevariabledemoComponent,
+    AgecalculatePipe,
     ],
   imports: [
     BrowserModule,

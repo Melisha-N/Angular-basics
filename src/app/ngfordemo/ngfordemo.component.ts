@@ -9,12 +9,14 @@ export class NgfordemoComponent implements OnInit {
 
   constructor() { }
 
-  public employees=[
+  public employees:any=[
     {
       "id": 1,
       "name": "Leanne Graham",
       "username": "Bret",
       "email": "Sincere@april.biz",
+      "age": new Date("1970-05-09"),
+       // "age": "Thu sept 22 2000 19:04:09 GMT+0530",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -38,6 +40,7 @@ export class NgfordemoComponent implements OnInit {
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
+      "age": new Date("1999-05-09"),
       "address": {
         "street": "Victor Plains",
         "suite": "Suite 879",
@@ -61,6 +64,7 @@ export class NgfordemoComponent implements OnInit {
       "name": "Clementine Bauch",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
+      "age": new Date("1979-05-09"),
       "address": {
         "street": "Douglas Extension",
         "suite": "Suite 847",
@@ -84,6 +88,7 @@ export class NgfordemoComponent implements OnInit {
       "name": "Patricia Lebsack",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
+      "age": new Date("1989-05-09"),
       "address": {
         "street": "Hoeger Mall",
         "suite": "Apt. 692",
@@ -107,6 +112,7 @@ export class NgfordemoComponent implements OnInit {
       "name": "Chelsey Dietrich",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
+      "age": new Date("1966-05-09"),
       "address": {
         "street": "Skiles Walks",
         "suite": "Suite 351",
@@ -130,6 +136,7 @@ export class NgfordemoComponent implements OnInit {
       "name": "Mrs. Dennis Schulist",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
+      "age": new Date("1995-05-09"),
       "address": {
         "street": "Norberto Crossing",
         "suite": "Apt. 950",
@@ -153,6 +160,7 @@ export class NgfordemoComponent implements OnInit {
       "name": "Kurtis Weissnat",
       "username": "Elwyn.Skiles",
       "email": "Telly.Hoeger@billy.biz",
+      "age": new Date("1980-05-09"),
       "address": {
         "street": "Rex Trail",
         "suite": "Suite 280",
@@ -176,6 +184,7 @@ export class NgfordemoComponent implements OnInit {
       "name": "Nicholas Runolfsdottir V",
       "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
+      "age": new Date("1940-05-09"),
       "address": {
         "street": "Ellsworth Summit",
         "suite": "Suite 729",
@@ -199,6 +208,7 @@ export class NgfordemoComponent implements OnInit {
       "name": "Glenna Reichert",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
+      "age": new Date("2000-05-09"),
       "address": {
         "street": "Dayna Park",
         "suite": "Suite 449",
@@ -222,6 +232,7 @@ export class NgfordemoComponent implements OnInit {
       "name": "Clementina DuBuque",
       "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
+      "age": new Date("2006-11-09"),
       "address": {
         "street": "Kattie Turnpike",
         "suite": "Suite 198",

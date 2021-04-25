@@ -1,0 +1,17 @@
+<!-- <p>calculator-si app</p> -->
+<div [ngClass]="'header'">
+    <h3>Simple Interest - Calculator</h3>
+</div>
+
+<div [ngClass]="'box'">
+Principle: <input type="text" name="principle" placeholder="Enter PrincipleAmount" #p><br>
+<br>Time: <input type="text" name="time" placeholder="Enter Time in years" #t><br>
+<br>Rate Of Interest: <input type="text" name="rateofinterest" placeholder="Enter Rate Of Interest" #r><br>
+<br><button (click)="calculationSI(p.value,t.value,r.value)">Calculate</button>
+<p [ngStyle]="{'color':(interest==0)?'transparent':((interest>0)?'red':'green')}">{{msg}}{{SI}}<br>{{message}}</p>
+</div>
+
+
+<div [ngClass]="'footer'">
+    <h5>All Rights Reserved @SICalculator</h5>
+</div>
