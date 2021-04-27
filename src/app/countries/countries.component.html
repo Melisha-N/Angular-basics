@@ -1,0 +1,23 @@
+<p>countries example</p>
+<!-- <button (click)="displayCountries()">Display</button> -->
+<!-- <p>Details of Countries:<br>{{myCountries|json}}</p> -->
+
+<!-- <ol>
+    <li *ngFor="let country of myCountries">
+        {{country.name}} -- {{country.capital}} 
+    </li>
+</ol> -->
+
+<label>Select Country : </label>
+<select (click)="selectCountry($event)" #countryName (change) = "getByCountryName(countryName.value)">
+<option value="">--select--</option>
+<option *ngFor="let mycountry of myCountries">{{mycountry.name}}</option>
+</select>
+
+<h3>Selected Country Details:</h3>
+<p *ngFor="let cntry of cntryName">
+<label><b>Country</b> :</label>{{cntry.name}}<br>
+<label><b>Capital</b> :</label>{{cntry.capital}}<br>
+<label><b>Population</b> :</label>{{cntry.population}}<br>
+<label><b>Flag Link</b> :</label>{{cntry.flag}}
+</p>

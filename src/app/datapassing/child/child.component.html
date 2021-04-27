@@ -1,0 +1,12 @@
+<div [ngClass]="'box'">
+<p>child - demo</p>
+<!-- parent to child -- @Input() -->
+<!-- {{studentName}}
+<p>{{nameOfCompany}}</p> -->
+
+<!-- child to parent -- @Output() -->
+{{studentName}}
+<p>{{nameOfCompany}}</p>
+<button (click)="sendData('PC')">SEND</button>
+
+</div>

@@ -1,0 +1,13 @@
+<div [ngClass]="'box'">
+<p>parent - demo</p>
+<!--  parent to child -- @Input() -->
+<!-- {{studentName}}
+<p>Working in:{{companyName}}</p>
+<app-child [studentName]="studentName" [companyName]="companyName"></app-child> -->
+
+<!-- child to parent -->
+{{studentName}}
+<!-- <p>Working in:{{companyName}}</p> -->
+<app-child [studentName]="studentName" [companyName]="companyName" (sendMessage)="recieveMsg($event)"></app-child>
+{{productName}}
+</div>

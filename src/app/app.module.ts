@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
@@ -18,6 +19,18 @@ import { NgstyledemoComponent } from './ngstyledemo/ngstyledemo.component';
 import { CalculatorSIComponent } from './calculator-si/calculator-si.component';
 import { TemplatereferencevariabledemoComponent } from './templatereferencevariabledemo/templatereferencevariabledemo.component';
 import { AgecalculatePipe } from './pipesdemo/agecalculate.pipe';
+import { ParentComponent } from './datapassing/parent/parent.component';
+import { ChildComponent } from './datapassing/child/child.component';
+import { CountriesComponent } from './countries/countries.component';
+import { from } from 'rxjs';
+import { ViewComponent } from './routingcomponent/view/view.component';
+import { DashboardComponent } from './routingcomponent/dashboard/dashboard.component';
+import { EmployeeListComponent } from './routingcomponent/employee-list/employee-list.component';
+import { PageNotFoundComponent } from './routingcomponent/page-not-found/page-not-found.component';
+import { HomeComponent } from './routingcomponent/home/home.component';
+import { MyAppRouteRoutingModule } from './my-app-route/my-app-route-routing.module';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -38,12 +51,23 @@ import { AgecalculatePipe } from './pipesdemo/agecalculate.pipe';
     CalculatorSIComponent,
     TemplatereferencevariabledemoComponent,
     AgecalculatePipe,
+    ParentComponent,
+    ChildComponent,
+    CountriesComponent,
+    DashboardComponent
+
     ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    MyAppRouteRoutingModule,
+    // RouterModule, 
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
