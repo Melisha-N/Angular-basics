@@ -1,0 +1,99 @@
+<!-- <p>registration works!</p> -->
+<div [ngClass]="'header'">
+    <h2>Employee-Registration</h2>
+  <!-- <p style="text-align: right;"><input type="submit" value="LOGIN"></p> -->
+</div>
+<!-- <div ><button value="LOGIN">Login</button></div> -->
+
+<form #registration="ngForm" (ngSubmit)="registration(registration.value)">
+    <div [ngClass]="'box'">
+    <label>Full Name:</label>
+    <input type="text" name="fname" minlength="3" maxlength="10" pattern="[a-zA-Z]*" required #fname="ngModel" [(ngModel)]="Register.fname">
+    <div *ngIf="fname.errors &&(fname.dirty || fname.touched)">
+        <div [hidden]="!fname.errors.required">
+            Please enter the Full Name
+        </div>
+        <div [hidden]="!fname.errors.minlength">
+            Full Name cannot be less than 3 letters
+        </div>
+        <div [hidden]="!fname.errors.maxlength">
+            Full Name cannot be greater than 10 letters
+        </div>
+        <div [hidden]="!fname.errors.pattern">
+            Full Name should be of pattern: a-z A-Z
+        </div>
+    </div>
+
+    <br><br><label>Email Id:</label>
+    <input type="text" name="emailid" pattern="^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$" required #emailid="ngModel" [(ngModel)]="Register.emailid">
+    <div *ngIf="emailid.errors &&(emailid.dirty || emailid.touched)">
+        <div [hidden]="!emailid.errors.required">
+            Please enter the Email Id
+        </div>
+        <div [hidden]="!emailid.errors.pattern">
+            Please enter valid email id 
+        </div>
+    </div>
+
+    <br><br><label>DOB:</label>
+    <input type="date" name="dob" required #dob="ngModel" [(ngModel)]="Register.dob">
+    <div *ngIf="dob.errors &&(dob.dirty || dob.touched)">
+        <div [hidden]="!dob.errors.required">
+            Please enter the DOB
+        </div>
+    </div>
+
+
+    <br><br><label>Contact:</label>
+    <input type="tel" name="contact" minlength="10" maxlength="10" required #contact="ngModel" [(ngModel)]="Register.contact">
+    <div *ngIf="contact.errors &&(contact.dirty || contact.touched)">
+        <div [hidden]="!contact.errors.required">
+            Please enter the Contact
+        </div>
+        <div [hidden]="!contact.errors.minlength">
+            Contact should be 10 digits
+        </div>
+        <div [hidden]="!contact.errors.maxlength">
+            Contact maximum 10 digits
+        </div>
+    </div>
+
+    <br><br><label>Gender:</label>
+    <input type="text" name="gender" required #gender="ngModel" [(ngModel)]="Register.gender">
+    <div *ngIf="gender.errors &&(gender.dirty || gender.touched)">
+        <div [hidden]="!gender.errors.required">
+            Please enter the Gender
+        </div>
+    </div>
+
+    <br><br><label>Password:</label>
+    <input type="password" name="password" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,30})" required #password="ngModel" [(ngModel)]="Register.password">
+    <div *ngIf="password.errors &&(password.dirty || password.touched)">
+        <div [hidden]="!password.errors.required">
+            Please enter the Password
+        </div>
+        <div [hidden]="!password.errors.pattern">
+            Password must contain atleast one uppercase letter, one lowercase letter , one number and atleast 8 or more characters 
+        </div>
+    </div>
+
+    <br><br><label>Confirm Password:</label>
+    <input type="password" name="cnfpassword" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,30})" required #cnfpassword="ngModel" [(ngModel)]="Register.cnfpassword">
+    <div *ngIf="cnfpassword.errors &&(cnfpassword.dirty || cnfpassword.touched)">
+        <div [hidden]="!cnfpassword.errors.required">
+            Please enter the Confirm Password
+        </div>
+        <div [hidden]="!cnfpassword.errors.pattern">
+            Confirm Password must contain atleast one uppercase letter, one lowercase letter , one number and atleast 8 or more characters 
+        </div>
+    </div>
+    <br><br><input type="submit" value="Register" [disabled]="!registration.valid"><br><br>
+
+    <input type="reset" value="Clear">
+    </div>
+</form>
+
+
+<div [ngClass]="'footer'">
+    <h4>CopyRights@EmployeeRegistartion</h4>
+</div>

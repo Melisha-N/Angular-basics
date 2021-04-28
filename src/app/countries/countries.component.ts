@@ -15,7 +15,7 @@ export class CountriesComponent implements OnInit {
   ngOnInit(): void {
     this._countries.getCountriesList().subscribe(data =>{
       this.myCountries = data;
-      // console.log(this.myCountries);
+      // console.log("myCountries"+this.myCountries);
       
   })
   }

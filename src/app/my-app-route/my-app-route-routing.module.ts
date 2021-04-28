@@ -5,12 +5,13 @@ import { EmployeeListComponent } from '../routingcomponent/employee-list/employe
 import { HomeComponent } from '../routingcomponent/home/home.component';
 import { PageNotFoundComponent } from '../routingcomponent/page-not-found/page-not-found.component';
 import { ViewComponent } from '../routingcomponent/view/view.component';
-
+import { RegistrationComponent } from '../registration/registration.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'empList', component:EmployeeListComponent},
   {path:'view', component:ViewComponent},
+  {path:'reg', component:RegistrationComponent},
   {path:'', redirectTo:'/home', pathMatch:'full'},
   {path:'**', component:PageNotFoundComponent}
 ];
@@ -24,7 +25,8 @@ export const routeComponents=[
   ViewComponent,
   EmployeeListComponent,
   PageNotFoundComponent,
-  HomeComponent
+  HomeComponent,
+  RegistrationComponent
 ]
 
 

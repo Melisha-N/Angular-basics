@@ -30,6 +30,7 @@ import { PageNotFoundComponent } from './routingcomponent/page-not-found/page-no
 import { HomeComponent } from './routingcomponent/home/home.component';
 import { MyAppRouteRoutingModule } from './my-app-route/my-app-route-routing.module';
 import { RouterModule } from '@angular/router';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 
@@ -54,7 +55,8 @@ import { RouterModule } from '@angular/router';
     ParentComponent,
     ChildComponent,
     CountriesComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegistrationComponent
 
     ],
   imports: [
